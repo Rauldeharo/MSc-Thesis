@@ -14,9 +14,9 @@ macs2 callpeak -t $BAM -c $BAM_INPUT -f $FORMAT -g $ORG -n ${PREFIX} --outdir $O
 ## SEACR
 Peak obtainment with this peak calling was performed using the latest version (SEACR v1.3)
 
-2 different modes were used (stringent and relaxed), which corresponds to a high or softer threshold in peak signal detection, respectivelY:
+2 different modes were used (stringent and relaxed), which corresponds to a high or softer threshold in peak signal detection, respectively:
 
 ```
-bash SEACR_1.3.sh sample.bedgraph IgG.bedgraph norm stringent|relaxed outpuT
+bash SEACR_1.3.sh sample.bedgraph IgG.bedgraph norm stringent|relaxed output
 ```
 
