@@ -1,6 +1,5 @@
-
-
-```
+Functional analysis integrating these states with RNA-seq was performed
+```R
 library(GenomicRanges)
 library(reshape2)
 library(ggplot2)
