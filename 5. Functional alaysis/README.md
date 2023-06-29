@@ -1,3 +1,6 @@
+
+
+```
 library(GenomicRanges)
 library(reshape2)
 library(ggplot2)
@@ -149,3 +152,4 @@ for (inter in inter_files) {
 
 #Visualization of correlation between states and gene expression ----
 ggplot(data = all_conditions, aes(x = variable,y = value, fill = State))+ geom_boxplot() +ylab("log10 mRNA expression")+ facet_wrap(~condition)+theme+ theme(panel.border=element_rect(color="black",fill=NA))
+```
