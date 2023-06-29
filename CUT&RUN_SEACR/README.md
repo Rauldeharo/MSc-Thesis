@@ -3,7 +3,7 @@
 
 ## Transform BAM to a Bedgraph file (input to SEACR peak calling)
 From BAM filtered file (same pipeline as Chip-seq) we get a a BAM No duplicates file.
-We have to modify to use bedraph file in SEACR peak calling
+We have to modify it to use bedraph file in SEACR peak-caller
 
 ``` !/bin/bash
 
