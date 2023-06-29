@@ -16,7 +16,12 @@ Peak obtainment with this peak-caller was performed using the latest version (SE
 
 2 different modes were used (stringent and relaxed), which corresponds to a high or softer threshold in peak signal detection, respectively:
 
+Using as input files: Experimental bedgraph ($exp_sample) and Control bedgraph ($IgG)
+Obtaining as output $nB_WT_IgG_3_CUTnRUN
+
 ```
-bash SEACR_1.3.sh sample.bedgraph IgG.bedgraph norm stringent|relaxed output
+!/bin/bash
+
+SEACR_1.3.sh $exp_sample $IgG norm stringent|relaxed nB_WT_IgG_3_CUTnRUN
 ```
 
