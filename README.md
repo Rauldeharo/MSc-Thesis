@@ -1,7 +1,7 @@
 # MSc-Thesis
 This repository aims to share all the scripts used for the analysis of ChIP-seq and CUT&RUN data, with the final goal to benchmark a peak calling for CUT&amp;RUN.
 
-This MSc project is in the framework of the study of transcriptional regulation, principal research of 3D Chromatin Organization group led by Dr. Javierre BM. [3D Chromatin Organization](https://www.carrerasresearch.org/es/organizaci%C3%B3n-3d-de-la-cromatina_78766)
+This MSc project is in the framework of the study of transcriptional regulation, principal research of [3D Chromatin Organization Group](https://www.carrerasresearch.org/es/organizaci%C3%B3n-3d-de-la-cromatina_78766) led by Dr. Javierre BM. 
 
 ## Peak-callers analyzed:
 
