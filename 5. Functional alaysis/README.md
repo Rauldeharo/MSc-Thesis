@@ -1,4 +1,8 @@
-Functional analysis integrating these states with RNA-seq was performed
+# Functional analysis integrating ChromHMM states with RNA-seq
+In order to find a biological meaning in the states annotated as active or repressed, merge of ChromHMM states previously obtained with RNA-seq data was performed. Therefore, a states-overlapping gene promoters (defined as -1000 +250bp from the TSS) were used to determine their correlation between state classifcation and RNA-seq expression.
+
+## Grouping states-overlapping gene promoters
+First, genes (annotated based on promoter regions) that overlap state regions were selected and classified into active-repressed genes (based on the overlapped state)
 ```R
 library(GenomicRanges)
 library(reshape2)
@@ -95,8 +99,11 @@ for (i in 1:length(intersection)) {
   final_df <- rbind(new_df1,new_df2)
   write.table(x = final_df,file = paste0("~/Documents/BIOINFORMATICS/TFM/Results/ChromHMM/",names(intersection)[i],".tsv"),sep ="\t",col.names = T, row.names = F)
 }
+```
 
-
+## Merging with RNA-seq data
+Then, genes previously selected were correlated with their expression in the RNA-seq.
+```R
 #MERGE WITH RNA-seq ----
 library(tidyverse)
 
