@@ -29,12 +29,3 @@ cut -f 1,2,6 ${new_input_file}.clean.bed | sort -k1,1 -k2,2n -k3,3n > ${new_inpu
 #transform to bedgraph (-bg) using a reference genome (-g)
 bedtools genomecov -bg -i ${new_input_file}.fragments.bed -g /mnt/beegfs/rdeharo/prueba/Homo_sapiens.GRCh38.104.dna.all_chr.fa.fai > ${new_input_file}.fragments.bedgraph
 ```
-## Command to run SEACR peak calling:
-Using as input files: Experimental bedgraph (exp_sample) and Control bedgraph (IgG)
-
-``` !/bin/bash
-exp_sample="/mnt/beegfs/rdeharo/prueba/nB_WT_H3K27me3_3_CUTnRUN.filt.nodup.fragments.bedgraph"
-IgG="/mnt/beegfs/rdeharo/prueba/nB_WT_IgG_3_CUTnRUN.filt.nodup.fragments.bedgraph"
-
-SEACR_1.3.sh $exp_sample $IgG norm stringent nB_WT_IgG_3_CUTnRUN
-```
