@@ -1,6 +1,10 @@
 # MSc-Thesis
 This repository aims to share all the scripts used for the analysis of ChIP-seq and CUT&RUN data, with the final goal to benchmark a peak calling for CUT&amp;RUN.
 
+Peak-callers analyzed:
+[**MACS2** ](https://github.com/macs3-project/MACS)
+[**SEACR**](https://github.com/FredHutch/SEACR)
+
 Sequencing files were obtained from nB-cells using HiseqX platform on Macrogen Inc.
 All reads processing steps were performed following the ENCODE standards, as it is described on [JavierreLab_liCHiC](https://github.com/JavierreLab/liCHiC/tree/main/3.ChIPseq%20Processing)
 
