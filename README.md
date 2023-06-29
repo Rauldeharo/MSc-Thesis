@@ -3,6 +3,7 @@ This repository aims to share all the scripts used for the analysis of ChIP-seq 
 
 Peak-callers analyzed:
 [**MACS2** ](https://github.com/macs3-project/MACS)
+
 [**SEACR**](https://github.com/FredHutch/SEACR)
 
 Sequencing files were obtained from nB-cells using HiseqX platform on Macrogen Inc.
