@@ -1,3 +1,14 @@
+# Enrichment analysis
+Following with the analysis of the biological meaning of the states, an enrichment analysis was performed.
+Genes previously obtained from promoter annotation were divided into 4 different groups (quartiles) based on their expression.
+
+Crosswise permutation test was performed using the regioneReloaded (v1.2) package [regioneReloaded](https://bioconductor.org/packages/release/bioc/html/regioneReloaded.html)
+
+
+## Data preparation
+2 sets were implemented: 1 with the 4 groups of genes recently generated, and the other one with states-BED files from ChromHMM
+
+```R
 library(regioneReloaded)
 library(BSgenome.Hsapiens.UCSC.hg38)
 library(ggplot2)
@@ -62,7 +73,12 @@ q4_nB_WT <- makeGRangesFromDataFrame(nB_counts[(nB_counts$mean > q_nB_WT[4]) & (
 list_states <- list(GR_MACS_chip_10,GR_MACS_CnR_10, GR_SEACR_str_10, GR_SEACR_rel_10)
 #Second set: Genes divided in 4 quartiles
 list_genes <- list(q1=q1_nB_WT,q2=q2_nB_WT,q3=q3_nB_WT,q4=q4_nB_WT)
+```
+## Permutation test
+Enrichment test was done computing 1 set over the other, using the randomizeRegions function and performing 5000 permutations.
 
+
+```R
 #Perform crosswise permutation test ----
 enrich <-  crosswisePermTest(
   Alist = list_states,
@@ -99,6 +115,6 @@ ggplot(data = matrix_plot,aes(x= X, y = state, fill = value)) +
                        values = scales::rescale(c(4,0,-0.2)), 
                        oob = scales::squish) +
   facet_wrap(~ condition, scales = "free_y")
-
+```
 
 
